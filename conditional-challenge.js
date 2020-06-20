@@ -9,3 +9,4 @@ const whichSchool = function(age) {
 }
 
 console.log(whichSchool(14));
+

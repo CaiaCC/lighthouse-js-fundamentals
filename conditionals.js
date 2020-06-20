@@ -23,4 +23,4 @@ if(temperature < -40 && temperature > 40) {
 
 console.log("Now you're ready to go outside!");
 
-I love Trent.
+
