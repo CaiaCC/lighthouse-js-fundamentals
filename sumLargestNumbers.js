@@ -1,16 +1,14 @@
 const sumLargestNumbers = function(data) {
-	let firstMax = 0;
+	let firstMax = Number.MIN_VALUE;
   let secMax = 0;
 	for (let i = 0; i < data.length; i++) {
 		if (firstMax < data[i]) {
+			secMax = firstMax;
 			firstMax = data[i];
-		}
-	}
-	for (let i = 0; i < data.length; i++) {		
-		if (data[i] < firstMax && secMax < data[i] ) {
+		} else if (secMax < data[i]) {
 			secMax = data[i];
 		}
 	}
 	return firstMax + secMax;
 };
-console.log(sumLargestNumbers([10, 4, 34, 6, 92, 2]));
+console.log(sumLargestNumbers([39, 100, 105, 2, 1, 101]));
