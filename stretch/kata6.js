@@ -22,8 +22,6 @@ const repeatNumbersWithForEach = function(data) {
 		let result = "";
 		const repeatNum = element[0].toString();
 		const repeatTimes = element[1];
-
-
 		
 		for (let j = 0; j < repeatTimes; j++) {
 			result += repeatNum;
