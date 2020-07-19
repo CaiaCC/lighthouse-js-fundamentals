@@ -1,8 +1,18 @@
 const urlDecode = function(text) {
-	let output = {};
-	const word = text.split("=")
-//find "="" index, make 0-index output's key 
+	const output = {};
+	const word = text.split("&");
+
+	for (let i = 0; i < word.length; i++) {
+		const keyPair = word[i].split("=");
+		output[keyPair[0]] = replaceWithWhitespace(keyPair[1]);
+	};
+	return output;
 };
+
+const replaceWithWhitespace = function (input) {
+	const words = input.split("%20");
+	return words.join(" ");
+}
 
 console.log(urlDecode("duck=rubber"));
 console.log(urlDecode("bootcamp=Lighthouse%20Labs"));
